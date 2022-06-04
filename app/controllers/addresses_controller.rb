@@ -3,7 +3,4 @@ class AddressesController < ApplicationController
     @address = Address.new
     authorize @address
   end
-
-  
-
 end
