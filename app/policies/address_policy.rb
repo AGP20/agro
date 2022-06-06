@@ -5,6 +5,10 @@ class AddressPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def show?
+    true
+  end
   def new?
     true
   end

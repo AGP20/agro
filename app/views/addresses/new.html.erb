@@ -1,1 +1,11 @@
-<h1> NEW </h1>
+<h1> NEW ADDRESS </h1>
+<div class="container">
+<%= simple_form_for [@user,@address] do |f| %>
+  <%= f.input :city, size: "10x5" %>
+  <%= f.input :street %>
+  <%= f.input :number %>
+  <%= f.input :neighborhood %>
+  <%= f.input :cep %>
+  <%= f.button :submit, "Create", class: "btn btn-primary" %>
+<% end %>
+</div>
