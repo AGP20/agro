@@ -7,4 +7,7 @@ devise_for :users
     resources :addresses do
     end
   end
+
+  resources :scores do
+  end
 end
