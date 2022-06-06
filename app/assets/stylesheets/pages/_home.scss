@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+
+.home-how-it-works {
+  text-align: center;
+}
+
+.home-section {
+  position: relative;
+  padding: 85px 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.home-hiw-row {
+  margin: 50px auto;
+  font-family: Open Sans,sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  padding-left: 0;
+  list-style: none;
+}
+
+.home-hiw-row li {
+  padding: 0 50px;
+}
+
+.home-bullet-point-1, .home-bullet-point-2, .home-bullet-point-3 {
+  position: relative;
+}

@@ -1,0 +1,170 @@
+// cards - Home2
+.card-home3 {
+  overflow: hidden;
+  height: 100px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-home3 h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-home3 p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-home3 .card-home3-infos {
+  padding: 16px;
+}
+
+.card-home3-image {
+  display: flex;
+}
+
+.card-home3-image h2 {
+  padding: 0px 10px;
+}
+
+
+// cards - Home3
+.cards-agricultor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  height: 200px;
+}
+
+// cards - Home5
+.cards-investidor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.cards-home6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  height: 200px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  background: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //color: white;
+  font-size: 24px;
+  font-weight: bold;
+  //text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category h1 {
+  font-size: 25px;
+  //font-weight: bold;
+  margin: 0;
+}
+
+.card-category h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-category p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-category .card-category-infos {
+  padding: 16px;
+}
+
+// Smallest device
+//@media (min-width: 100px) and (max-width: 575px) {
+//  .cards-agricultor {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) {
+//  .cards-agricultor {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) {
+//  .cards-agricultor {
+//    grid-template-columns: 1fr 1fr;
+//  }
+//}
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) {
+//  .cards-agricultor {
+//    grid-template-columns: 1fr 1fr;
+//  }
+//}
+
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) {
+//  .cards-agricultor {
+//    grid-template-columns: 1fr 1fr;
+//  }
+//}
+
+
+// Smallest device
+//@media (min-width: 100px) and (max-width: 575px) {
+ // .cards-investidor {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) {
+//  .cards-investidor {
+//    grid-template-columns: 1fr;
+//  }
+//}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) {
+//  .cards-investidor {
+//    grid-template-columns: 1fr 1fr;
+//  }
+//}
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) {
+//  .cards-investidor {
+//    grid-template-columns: 1fr 1fr 1fr;
+//  }
+//}
+
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) {
+//  .cards-investidor {
+//    grid-template-columns: 1fr 1fr 1fr;
+//  }
+//}
