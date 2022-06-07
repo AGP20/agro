@@ -13,6 +13,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color:black;
 }
 
 .card-home3 p {
@@ -21,6 +22,7 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: black;
 }
 
 .card-home3 .card-home3-infos {
@@ -42,6 +44,8 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   height: 200px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 // cards - Home5
@@ -56,6 +60,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   height: 200px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .card-category {

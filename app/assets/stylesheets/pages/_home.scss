@@ -4,6 +4,31 @@
   text-align: center;
 }
 
+.home2-section {
+  position: relative;
+  padding: 120px 0;
+  background: white;
+}
+
+.home4e6-section {
+  position: relative;
+  padding: 120px 0;
+  background: $dark-green3;
+}
+
+.home4e6-description h1, h5, p {
+  color:white
+}
+
+.home5 {
+  position: relative;
+  padding: 85px 0;
+}
+
+.home5-description h5, p {
+  color: black;
+}
+
 .home-section {
   position: relative;
   padding: 85px 0;
@@ -12,6 +37,18 @@
 .container {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.container-branco {
+  padding-right: 15px;
+  padding-left: 15px;
+  background: white;
+}
+
+.container-verde {
+  padding-right: 15px;
+  padding-left: 15px;
+  background: $dark-green3;
 }
 
 .home-hiw-row {
@@ -30,8 +67,4 @@
 
 .home-bullet-point-1, .home-bullet-point-2, .home-bullet-point-3 {
   position: relative;
-}
-
-.home2-color {
-  background-color: $dark-green2;
 }
