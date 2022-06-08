@@ -13,7 +13,7 @@
 .home4e6-section {
   position: relative;
   padding: 120px 0;
-  background: $dark-green3;
+  background: green; //
 }
 
 .home4e6-description h1, h5, p {
@@ -48,7 +48,7 @@
 .container-verde {
   padding-right: 15px;
   padding-left: 15px;
-  background: $dark-green3;
+  background: green; //
 }
 
 .home-hiw-row {
@@ -67,4 +67,8 @@
 
 .home-bullet-point-1, .home-bullet-point-2, .home-bullet-point-3 {
   position: relative;
+}
+
+.color-green {
+  color: green;
 }
