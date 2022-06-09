@@ -3,6 +3,7 @@ class ScoresController < ApplicationController
     @score = Score.new
     authorize @score
   end
+  
   def create
     @score = Score.new(list_params)
     @score.user = current_user

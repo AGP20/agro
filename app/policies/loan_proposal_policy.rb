@@ -25,4 +25,8 @@ class LoanProposalPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def accept?
+    true
+  end
 end

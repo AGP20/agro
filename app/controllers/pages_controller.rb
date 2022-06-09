@@ -5,8 +5,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @token = getoken
-    binding.pry
+    @token = gettoken
+    @loan_proposals = LoanProposal.all
   end
 
   def gettoken

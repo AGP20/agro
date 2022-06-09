@@ -8,12 +8,10 @@
       </div>
 
         <%= link_to 'Voltar para Home', user_profile_path %>
-        <% if current_user.role == 'investor' %>
+        <% if current_user.role == 'investor' && @loan_proposal.accepted != 'Aceito' %>
           <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal) %>
         <% end %>
 
 
     </div>
 </div>
-© 2022 GitHub, Inc.
-Terms
