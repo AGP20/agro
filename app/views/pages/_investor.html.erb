@@ -3,6 +3,6 @@
   <p>Email do Usuário: <%= proposal.user.email %></p>
   <p>Valor: <%= proposal.amount %></p>
   <p>Condições: <%= proposal.conditions %></p>
+  <p>Status da Proposta: <%= proposal.accepted %></p>
   <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
-  <%= link_to 'Detalhes 2', loan_proposal_path(proposal.id) %>
 <% end %>
