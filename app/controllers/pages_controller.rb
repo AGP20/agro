@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def profile
     @token = gettoken
+    @loan_proposals = LoanProposal.all
   end
 
   def gettoken
