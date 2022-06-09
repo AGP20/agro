@@ -1,4 +1,4 @@
-// cards - Home2
+// cards - Home3
 .card-home3 {
   overflow: hidden;
   height: 100px;
@@ -38,7 +38,7 @@
 }
 
 
-// cards - Home3
+// cards - Home4
 .cards-agricultor {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,6 +55,7 @@
   grid-gap: 16px;
 }
 
+// cards - home6
 .cards-home6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -103,6 +104,47 @@
 .card-category .card-category-infos {
   padding: 16px;
 }
+
+
+// ######### log in ############ //
+
+.card-login {
+  overflow: hidden;
+  height: 450px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-login img {
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+}
+
+.card-login h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-login p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-login .card-login-infos {
+  padding: 300px;
+}
+
+
+
+
+
 
 // Smallest device
 //@media (min-width: 100px) and (max-width: 575px) {
