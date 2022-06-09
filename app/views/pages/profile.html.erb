@@ -4,3 +4,6 @@
 <%= link_to 'Profile Risk', new_score_path %>
 <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path %>
 </div>
+
+<% @var = Score.find(current_user.id) %>
+<%= @var.risk %>
