@@ -5,8 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @token = getoken
-    binding.pry
+
   end
 
   def gettoken
