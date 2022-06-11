@@ -1,15 +1,20 @@
 
-<div class=container >
+
+<div class="container mt-5 " >
   <h1> Página do produtor</h1>
-  <%= link_to 'New Address', new_user_address_path(current_user.id) %>
-  <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path %>
+  <%= link_to 'New Address', new_user_address_path(current_user.id), class:"btn btn-login" %>
+  <%= link_to 'Risco', new_score_path(current_user.id), class:"btn btn-login" %>
+
+  <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path, class:"btn btn-login" %>
+
   <% @loan_proposals.each do |proposal| %>
-    <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal) %>
-  <% end  %>
-  <% @loan_proposals.each do |proposal| %>
-    <p><%= proposal.amount %></p>
-    <p><%= proposal.conditions %></p>
-    <p><%= proposal.accepted %></p>
-    <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal) %>
-  <% end %>
+      <h2>Proposta de Empréstimo</h2>
+
+        <p><%= proposal.amount %></p>
+        <p><%= proposal.conditions %></p>
+        <p><%= proposal.accepted %></p>
+        <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal), class:"btn btn-login" %>
+        <% end %>
+    </div>
+  </div>
 </div>

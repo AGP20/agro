@@ -1,8 +1,8 @@
-<div class="container pt-5 mt-5">
-  <div card= "card-login">
-  <img src="https://www.pexels.com/pt-br/foto/campo-de-milho-durante-o-dia-96715/" />
 
-    <div class="card-proposal-infos">
+<div class="container pt-5 mt-5">
+  <div class="card-product">
+    <img src="https://res.cloudinary.com/dxcmhqu2v/image/upload/v1654968986/planta%C3%A7%C3%A3o_ziudnc.jpg" />
+    <div class="card-product-infos">
       <h2>Proposta de empréstimo</h2>
       <div class= "row">
         <div class="col-lg-8 pt-6">
@@ -10,12 +10,10 @@
           <h2 class="my-3 pt-3"><strong>Descrição da proposta: <%= @loan_proposal.description %></strong></h2>
           <h2 class="my-3 pt-3"><strong>Status: <%= @loan_proposal.accepted %></strong></h2>
         </div>
-
-          <%= link_to 'Voltar para Home', user_profile_path %>
+          <%= link_to 'Voltar para Home', user_profile_path, class:"btn btn-login" %>
           <% if current_user.role == 'investor' && @loan_proposal.accepted != 'Aceito' %>
             <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal) %>
           <% end %>
       </div>
     </div>
-  </div>
 </div>
