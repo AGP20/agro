@@ -7,45 +7,45 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @token = gettoken
+    # @token = gettoken
+    @loan_proposals = LoanProposal.all
   end
 
-
   def gettoken
-    uri = URI.parse("https://api.cnptia.embrapa.br/token")
-    request = Net::HTTP::Post.new(uri)
-    request["Authorization"] = "Basic R1RDZjBITFRTRkRVbmsyQncyakFVVFV3STBzYTpXUjNUekpBREpaT1B1WUxGVnZQMmpnU2h3QWth"
-    request.set_form_data(
-      "grant_type" => "client_credentials",
-    )
+    # uri = URI.parse("https://api.cnptia.embrapa.br/token")
+    # request = Net::HTTP::Post.new(uri)
+    # request["Authorization"] = "Basic R1RDZjBITFRTRkRVbmsyQncyakFVVFV3STBzYTpXUjNUekpBREpaT1B1WUxGVnZQMmpnU2h3QWth"
+    # request.set_form_data(
+    #   "grant_type" => "client_credentials",
+    # )
 
-    req_options = {
-      use_ssl: uri.scheme == "https",
-      verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    }
+    # req_options = {
+    #   use_ssl: uri.scheme == "https",
+    #   verify_mode: OpenSSL::SSL::VERIFY_NONE,
+    # }
 
-    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-      http.request(request)
-    end
-    @token = JSON.parse(response.body)
-    return @token["access_token"]
+    # response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+    #   http.request(request)
+    # end
+    # @token = JSON.parse(response.body)
+    # return @token["access_token"]
   end
 
   def getzon(crop,ibge,token)
 
-    uri = URI.parse("https://api.cnptia.embrapa.br/agritec/v1/zoneamento?idCultura=#{crop}&codigoIBGE=#{ibge}")
-    request = Net::HTTP::Get.new(uri)
-    request["Accept"] = "application/json"
-    request["Authorization"] = "Bearer #{token}"
+  #   uri = URI.parse("https://api.cnptia.embrapa.br/agritec/v1/zoneamento?idCultura=#{crop}&codigoIBGE=#{ibge}")
+  #   request = Net::HTTP::Get.new(uri)
+  #   request["Accept"] = "application/json"
+  #   request["Authorization"] = "Bearer #{token}"
 
-    req_options = {
-      use_ssl: uri.scheme == "https",
-      verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    }
+  #   req_options = {
+  #     use_ssl: uri.scheme == "https",
+  #     verify_mode: OpenSSL::SSL::VERIFY_NONE,
+  #   }
 
-    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-      http.request(request)
-    end
-    @zone = JSON.parse(response.body)["data"]
+  #   response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  #     http.request(request)
+  #   end
+  #   @zone = JSON.parse(response.body)["data"]
   end
 end
