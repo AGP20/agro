@@ -16,7 +16,7 @@ class ScoresController < ApplicationController
     end
   end
 
-
+  
   private
 
   def list_params

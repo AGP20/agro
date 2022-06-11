@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    gettoken
+    # gettoken
   end
 
   def gettoken
