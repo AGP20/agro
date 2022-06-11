@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @token = gettoken
+    # @token = gettoken
   end
 
 

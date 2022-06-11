@@ -1,23 +1,30 @@
-<h1> New Scores </h1>
-<div class="container">
+<div class="container_score">
+  <h3> New Scores </h3>
+</div>
 
+<div class="score1">
+  <div class="col-md-4">
+    <%= simple_form_for [@score] do |f| %>
+      <h4><strong>Dados Pessoais</strong></h4>
+      <%= f.input :name, :input_html => {:style => 'width: 250px'} %>
+      <%= f.input :lastname, :input_html => {:style => 'width: 250px'} %>
+      <%= f.input :rg, :input_html => {:style => 'width: 250px'} %>
+      <%= f.input :cpf, :input_html => {:style => 'width: 250px'} %>
+      <%= f.input :dap, :input_html => {:style => 'width: 250px'} %>
+      <%= f.input :garantia, collection: ['Sim','Não'],:input_html => {:style => 'width: 250px'} %>
+  </div>
+</div>
 
-<%= simple_form_for [@score] do |f| %>
-  <h2>Dados Pessoais</h2>
-  <%= f.input :name, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :lastname, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :rg, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :cpf, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :dap, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :garantia, collection: ['Sim','Não'],:input_html => {:style => 'width: 250px'} %>
-
-  <h2>Dados da Safra</h2>
-  <%= f.input :crop, collection: ['Milho','Tomate'], :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :iniplant %>
-  <%= f.input :endplant %>
-  <%= f.input :experience, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :ha, :input_html => {:style => 'width: 250px'} %>
-  <%= f.input :annual_income, :input_html => {:style => 'width: 250px'} %>
-  <%= f.button :submit, "Create", class: "btn btn-success" %>
-<% end %>
+<div class="score2">
+  <div class="col-md-4">
+    <h4><strong>Dados da Safra</strong></h4>
+    <%= f.input :crop, collection: ['Milho','Tomate'], :input_html => {:style => 'width: 250px'} %>
+    <%= f.input :iniplant %>
+    <%= f.input :endplant %>
+    <%= f.input :experience, :input_html => {:style => 'width: 250px'} %>
+    <%= f.input :ha, :input_html => {:style => 'width: 250px'} %>
+    <%= f.input :annual_income, :input_html => {:style => 'width: 250px'} %>
+    <%= f.button :submit, "Create", class: "btn-login" %>
+  <% end %>
+  </div>
 </div>

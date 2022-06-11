@@ -1,11 +1,15 @@
-<h1> NEW ADDRESS </h1>
-<div class="container">
-<%= simple_form_for [@user,@address] do |f| %>
-  <%= f.input :city, size: "10x5" %>
-  <%= f.input :street %>
-  <%= f.input :number %>
-  <%= f.input :neighborhood %>
-  <%= f.input :cep %>
-  <%= f.button :submit, "Create", class: "btn btn-primary" %>
-<% end %>
+<div class="container_address">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <h3 class="address"> New Address </h3>
+      <%= simple_form_for [@user,@address] do |f| %>
+        <%= f.input :city, size: "10x5" %>
+        <%= f.input :street %>
+        <%= f.input :number %>
+        <%= f.input :neighborhood %>
+        <%= f.input :cep, label: 'CEP' %>
+        <%= f.button :submit, "Create", class: "btn-login" %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,10 @@
-<div class="container mt-5 pt-5">
-<h1>ola</h1>
-<%= link_to 'New Address', new_user_address_path(current_user.id) %>
-<%= link_to 'Profile Risk', new_score_path %>
-<%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path %>
+<div class="container_user1 mb-5 pb-5">
+  <h3>Olá, <%= current_user.email %></h3>
+    <div class="container_user2">
+      <%= link_to 'New Address', new_user_address_path(current_user.id), class: "btn-profile" %>
+      <%= link_to 'Profile Risk', new_score_path, class: "btn-profile" %>
+      <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path, class: "btn-profile" %>
+    </div>
 </div>
-
-<% @var = Score.find(current_user.id) %>
-<%= @var.risk %>
+<%# @var = Score.find(current_user.id) %>
+<%#= @var.risk %>
