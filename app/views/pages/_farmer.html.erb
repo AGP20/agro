@@ -1,20 +1,19 @@
+<div class="card profile">
+        <img src="https://images.unsplash.com/photo-1612428978260-2b9c7df20150?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Image">
+        <div class="details">
+            <h2>Stevie Blight</h2>
+            <p>Director</p>
+        </div>
+        <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  <div class="nois text-center ">
+    <div class="card-body">
 
-
-<div class="container mt-5 " >
-  <h1> Página do produtor</h1>
-  <%= link_to 'New Address', new_user_address_path(current_user.id), class:"btn btn-login" %>
-  <%= link_to 'Risco', new_score_path(current_user.id), class:"btn btn-login" %>
-
-  <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path, class:"btn btn-login" %>
-
-  <% @loan_proposals.each do |proposal| %>
-      <h2>Proposta de Empréstimo</h2>
-
-        <p><%= proposal.amount %></p>
-        <p><%= proposal.conditions %></p>
-        <p><%= proposal.accepted %></p>
-        <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal), class:"btn btn-login" %>
-        <% end %>
+      <p class="card-text"><h1>Olá, Produtor</h1> </p>
+      <%= link_to 'Endereco', new_user_address_path(current_user.id), class: 'btn btn-success' %>
+      <%= link_to 'Crédito', new_loan_proposal_path, class: 'btn btn-success' %>
+    </div>
+  <div class="progress" style="height: 3px">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
-</div>
