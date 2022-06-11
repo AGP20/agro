@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @token = gettoken
+    #@token = gettoken
   end
 
 
@@ -31,7 +31,7 @@ class PagesController < ApplicationController
     return @token["access_token"]
   end
 
-  def getzon(crop,ibge,token)
+  def getzon
 
     uri = URI.parse("https://api.cnptia.embrapa.br/agritec/v1/zoneamento?idCultura=#{crop}&codigoIBGE=#{ibge}")
     request = Net::HTTP::Get.new(uri)
