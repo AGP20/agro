@@ -1,8 +1,10 @@
-<h1>Opções de Investimento</h1>
-<% @loan_proposals.each do |proposal| %>
-  <p>Email do Usuário: <%= proposal.user.email %></p>
-  <p>Valor: <%= proposal.amount %></p>
-  <p>Condições: <%= proposal.conditions %></p>
-  <p>Status da Proposta: <%= proposal.accepted %></p>
-  <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
-<% end %>
+<div class="container mt-5">
+  <h1>Opções de Investimento</h1>
+  <% @loan_proposals.each do |proposal| %>
+    <p>Email do Usuário: <%= proposal.user.email %></p>
+    <p>Valor: <%= proposal.amount %></p>
+    <p>Condições: <%= proposal.conditions %></p>
+    <p>Status da Proposta: <%= proposal.accepted %></p>
+    <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
+  <% end %>
+</div>
