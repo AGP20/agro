@@ -28,15 +28,15 @@ class ScoresController < ApplicationController
     @var = PagesController.new
     @token = @var.gettoken
     @farmer = prms
-      if @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i >= 50000
-        @risk = 'Baixo Risco'
-        #@score_risk.save!
-      elsif @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i < 50000
-        @risk = 'Médio Risco'
-      elsif @farmer[:garantia] == 'Não' && @farmer[:annual_income].to_i > 300000
-        @risk = 'Baixo Risco'
-      else
-        @risk = 'Alto Risco'
-      end
+    if @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i >= 50000
+      @risk = 'Baixo Risco'
+      #@score_risk.save!
+    elsif @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i < 50000
+      @risk = 'Médio Risco'
+    elsif @farmer[:garantia] == 'Não' && @farmer[:annual_income].to_i > 300000
+      @risk = 'Baixo Risco'
+    else
+      @risk = 'Alto Risco'
     end
   end
+end

@@ -1,7 +1,14 @@
-<h1>Proposta de empréstimo</h1>
-<%= simple_form_for [@loan_proposal] do |f| %>
-  <%= f.input :amount %>
-  <%= f.input :conditions, :collection => ["12x", "24x", "48x"] %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="container_proposal">
+  <h3>Proposta de empréstimo</h3>
+</div>
+
+<div class="proposal">
+  <div class="col-md-4">
+    <%= simple_form_for [@loan_proposal] do |f| %>
+      <%= f.input :amount %>
+      <%= f.input :conditions, :collection => ["12x", "24x", "48x"] %>
+      <%= f.input :description %>
+      <%= f.submit class: "btn-login" %>
+    <% end %>
+  </div>
+</div>

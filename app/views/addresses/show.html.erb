@@ -1,4 +1,12 @@
-<h1>Show</h1>
-
-<%= @address.city %>
-<%= @address.street %>
+<div class="container_address">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <h3 class="mb-5">Show</h3>
+        <p><strong>City: </strong><%= @address.city %></p>
+        <p><strong>Stress: </strong><%= @address.street %></p>
+        <p><strong>Number: </strong><%= @address.number %></p>
+        <p><strong>Neighborhood: </strong><%= @address.neighborhood %></p>
+        <p><strong>CEP: </strong><%= @address.cep %></p>
+    </div>
+  </div>
+</div>
