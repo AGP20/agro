@@ -2,11 +2,25 @@
 
 
   <h1>Opções de Investimento</h1>
-  <% @loan_proposals.each do |proposal| %>
-    <p>Email do Usuário: <%= proposal.user.email %></p>
-    <p>Valor: <%= proposal.amount %></p>
-    <p>Condições: <%= proposal.conditions %></p>
-    <p>Status da Proposta: <%= proposal.accepted %></p>
-    <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
-  <% end %>
+    <div class="row">
+      <% @loan_proposals.each do |proposal| %>
+
+      <div class="card-trip">
+        <img src="https://res.cloudinary.com/dxcmhqu2v/image/upload/v1654971139/tomate_k5somf.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2>Proposta de Empréstimo</h2>
+            <p>Email do Usuário: <%= proposal.user.email %></p>
+              <p>Valor: R$ <%= proposal.amount %></p>
+              <p>Condições: <%= proposal.conditions %></p>
+              <p>Status da Proposta: <%= proposal.accepted %></p>
+              <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
+          </div>
+        </div>
+      </div>
+
+
+
+      <% end %>
+    </div>
 </div>
