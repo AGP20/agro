@@ -5,17 +5,18 @@
             <p>Agricultor</p>
         </div>
         <p id="info">Agricultora familiar desde 1990, profissão oriúnda de práticas familiares.</p>
-        <%= link_to 'Endereco', new_user_address_path(current_user.id),class: 'btn btn-success' %>
-        <%= link_to 'Risco', new_score_path, class: 'btn btn-success' %>
+        <%= link_to 'Endereco', new_user_address_path(current_user.id),class: 'btn btn-login' %>
+
     </div>
 
   <div class="nois text-center">
     <div class="card-body">
 
       <p class="card-text"><h1>Olá, Produtor</h1> </p>
-      <%= link_to 'Crédito', new_loan_proposal_path, class: 'btn btn-success' %>
-      <%= link_to "Meus dados", new_score_path, class: 'btn btn-success' %>
 
+      <%= link_to "Meus dados", new_score_path, class: 'btn btn-login' %>
+      <%= link_to 'Risco', new_score_path, class: 'btn btn-login' %>
+      <%= link_to 'Crédito', new_loan_proposal_path, class: 'btn btn-login' %>
     </div>
   <div class="progress" style="height: 3px">
     <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>

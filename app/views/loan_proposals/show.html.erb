@@ -12,7 +12,7 @@
         </div>
           <%= link_to 'Voltar para Home', user_profile_path, class:"btn btn-login" %>
           <% if current_user.role == 'investor' && @loan_proposal.accepted != 'Aceito' %>
-            <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal), class: 'btn btn-success' %>
+            <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal), class: 'btn btn-login' %>
           <% end %>
       </div>
     </div>
