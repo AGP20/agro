@@ -9,6 +9,21 @@ class PagesController < ApplicationController
   def profile
     # @token = gettoken
     @loan_proposals = LoanProposal.all
+    @var = "aceito"
+    if @var == "enviado"
+      @a = "active"
+      @b = ""
+      @c = ""
+    elsif @var == "analise"
+      @a = "active"
+      @b = "active"
+      @c = ""
+    else
+      @a = "active"
+      @b = "active"
+      @c = "active"
+    end
+
   end
 
   def gettoken
