@@ -1,7 +1,4 @@
 <div class="container mt-5">
-
-
-  <h1>Opções de Investimento</h1>
     <div class="row">
       <% @loan_proposals.each do |proposal| %>
 
@@ -9,10 +6,11 @@
         <img src="https://res.cloudinary.com/dxcmhqu2v/image/upload/v1654971139/tomate_k5somf.jpg" />
         <div class="card-trip-infos">
           <div>
-            <h2>Proposta de Empréstimo</h2>
+            <h2>Proposta de <%= proposal.user.scores.first.name %> <%= proposal.user.scores.first.lastname %></h2>
             <p>Email do Usuário: <%= proposal.user.email %></p>
               <p>Valor: R$ <%= proposal.amount %></p>
               <p>Condições: <%= proposal.conditions %></p>
+              <p>Risco: <%= proposal.user.scores.first.risk %></p>
               <p>Status da Proposta: <%= proposal.accepted %></p>
               <%= link_to 'Detalhes', loan_proposal_path(proposal) %>
           </div>
