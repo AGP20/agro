@@ -2,7 +2,7 @@
 require 'pry'
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
-  
+
   def home
   end
 
@@ -10,18 +10,20 @@ class PagesController < ApplicationController
     # @token = gettoken
     @loan_proposals = LoanProposal.all
     @status = LoanProposal.where(user_id: current_user.id)
-    if @status[0].accepted == "Enviado"
-      @a = "active"
-      @b = ""
-      @c = ""
-    elsif @var == "analise"
-      @a = "active"
-      @b = "active"
-      @c = ""
-    else
-      @a = "active"
-      @b = "active"
-      @c = "active"
+    if current_user.role == "farmer"
+      if @status[0].accepted == "Enviado"
+        @a = "active"
+        @b = ""
+        @c = ""
+      elsif @var == "analise"
+        @a = "active"
+        @b = "active"
+        @c = ""
+      else
+        @a = "active"
+        @b = "active"
+        @c = "active"
+      end
     end
 
   end
