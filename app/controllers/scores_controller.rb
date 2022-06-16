@@ -1,4 +1,6 @@
 class ScoresController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create]
+
   def new
     @score = Score.new
     authorize @score
@@ -21,19 +23,19 @@ class ScoresController < ApplicationController
   private
 
   def list_params
-    params.require(:score).permit(:annual_income, :crop, :ha, :garantia, :name, :lastname, :cpf, :rg, :dap, :experience, :iniplant, :endplant, :risk)
+    params.permit(:cpf, :crop, :name, :garantia, :dap, :experience, :ha, :annual_income)
   end
 
   def calc_score(prms)
     @var = PagesController.new
-    @token = @var.gettoken
+    #@token = @var.gettoken
     @farmer = prms
-    if @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i >= 50000
+    if @farmer[:garantia].capitalize == 'Sim' && @farmer[:annual_income].to_i >= 50000
       @risk = 'Baixo Risco'
       #@score_risk.save!
-    elsif @farmer[:garantia] == 'Sim' && @farmer[:annual_income].to_i < 50000
+    elsif @farmer[:garantia].capitalize == 'Sim' && @farmer[:annual_income].to_i < 50000
       @risk = 'Médio Risco'
-    elsif @farmer[:garantia] == 'Não' && @farmer[:annual_income].to_i > 300000
+    elsif @farmer[:garantia].capitalize == 'Não' && @farmer[:annual_income].to_i > 300000
       @risk = 'Baixo Risco'
     else
       @risk = 'Alto Risco'

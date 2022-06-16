@@ -19,6 +19,7 @@ puts 'creating 50 scores, 50 users and 50 loan proposals'
     annual_income: Faker::Number.number(digits: 10),
     crop: Faker::Food.vegetables,
     name: Faker::Name.first_name,
+    lastname: Faker::Name.last_name,
     risk: ['Alto', 'Médio', 'Baixo'].sample,
     user_id: user.id
   )
