@@ -2,15 +2,15 @@
 require 'pry'
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
-
+  
   def home
   end
 
   def profile
     # @token = gettoken
     @loan_proposals = LoanProposal.all
-    @var = "aceito"
-    if @var == "enviado"
+    @status = LoanProposal.where(user_id: current_user.id)
+    if @status[0].accepted == "Enviado"
       @a = "active"
       @b = ""
       @c = ""
