@@ -8,13 +8,14 @@
         <img src= "<%= img %>" />
         <div class="card-trip-infos">
           <div>
-            <h2>Proposta de <%= proposal.user.scores.first.name %> <%= proposal.user.scores.first.lastname %></h2>
+            <h2>Proposta de <%= proposal.user.scores.name %></h2>
             <p>Email do Usuário: <%= proposal.user.email %></p>
               <p>Valor: R$ <%= proposal.amount %></p>
               <p>Condições: <%= proposal.conditions %></p>
-              <p>Risco: <%= proposal.user.scores.first.risk %></p>
+
               <p>Status da Proposta: <%= proposal.accepted %></p>
               <%= link_to 'Detalhes', loan_proposal_path(proposal), class: 'btn btn-login' %>
+          </div>
           </div>
         </div>
       </div>
