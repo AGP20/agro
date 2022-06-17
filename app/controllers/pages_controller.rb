@@ -7,15 +7,14 @@ class PagesController < ApplicationController
   end
 
   def profile
-    # @token = gettoken
     @loan_proposals = LoanProposal.all
     @status = LoanProposal.where(user_id: current_user.id)
-    if current_user.role == "farmer"
+    if current_user.role == "farmer" && !@status.empty?
       if @status[0].accepted == "Enviado"
         @a = "active"
         @b = ""
         @c = ""
-      elsif @var == "analise"
+      elsif @status[0].accepted == "analise"
         @a = "active"
         @b = "active"
         @c = ""
